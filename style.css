@@ -1,9 +1,104 @@
-/* Base Styles--------------------------Base Styles */
+/* ================================================= 
+Base Element Styles----------Base element Styles 
+================================================== */
+html {
+  /* font-size: 20px; */
+}
+
+body {
+  margin: 1rem; 
+  font: 300 100%/1.5 sans-serif;
+  background-color: #CDE5D7;
+}
+
+h1 {
+  margin: 0;
+}
+
+h3 {
+  font: 300 1.3rem 'Fredoka One', cursive;
+  margin-top: 0;
+  margin-bottom:
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1em;
+  margin-bottom: 2.5rem;
+}
+
+img {
+  max-width: 100%;
+  /* max-width is 100% of the screen real estate, so it wont go far that you have to scroll to see the whole image. On mobile it centers the images.*/
+}
+
+/* ================================================   Base Layout Styles------------Base Layout Styles
+================================================== */
+
+/* -----------------Header-------------------- */
+.name, 
+.main-nav li {
+  text-align: center;
+  display: block;
+  padding: 20px 20px;
+}
 
 
+.name {
+  margin-bottom: -10px;
+  /* text-transform: uppercase; */
+}
+
+.main-nav li {
+  text-transform: uppercase;
+}
+
+/* ------------------Banner-------------------- */
+.banner {
+  text-align: center;
+}
+
+.profile {
+  width: 200px;
+}
+
+/* ------------------Portfolio------------------ */
+
+.portfolio h3 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.portfolio p {
+  text-align: center;
+}
+
+.calc {
+  margin-bottom: 200px;
+}
 
 
+/* -----------------Contact--------------------- */
 
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  margin-bottom: ;
+}
+
+ .contact p:nth-child(2), .contact p:nth-child(3)  {
+  margin-bottom: -4px;
+}
+
+
+/* ----------------Footer----------------------- */
 
 
 
@@ -21,3 +116,7 @@
 
 
 /* Media Queries------------------------Media Queries */
+
+@media (max-width: 320px) {
+
+}
