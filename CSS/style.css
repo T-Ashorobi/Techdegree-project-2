@@ -1,14 +1,15 @@
 /* ================================================= 
 Base Element Styles----------Base element Styles 
 ================================================== */
-html {
-  /* font-size: 20px; */
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 1rem; 
   font: 300 100%/1.5 sans-serif;
   background-color: #CDE5D7;
+  margin: 0;
 }
 
 h1 {
@@ -36,15 +37,20 @@ img {
   /* max-width is 100% of the screen real estate, so it wont go far that you have to scroll to see the whole image. On mobile it centers the images.*/
 }
 
-/* ================================================   Base Layout Styles------------Base Layout Styles
-================================================== */
+/* ================================================Base Layout Styles------------Base Layout Styles================================================== */
 
 /* -----------------Header-------------------- */
 .name, 
 .main-nav li {
   text-align: center;
-  display: block;
-  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+}
+
+.bg {
+  background: white;
+  margin: 10px 5px;
 }
 
 
@@ -60,6 +66,7 @@ img {
 /* ------------------Banner-------------------- */
 .banner {
   text-align: center;
+  margin-top: 30px;
 }
 
 .profile {
@@ -67,6 +74,13 @@ img {
 }
 
 /* ------------------Portfolio------------------ */
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 0 20px;
+}
 
 .portfolio h3 {
   text-align: center;
@@ -78,7 +92,7 @@ img {
 }
 
 .calc {
-  margin-bottom: 200px;
+  margin-bottom: 30px;
 }
 
 
@@ -86,6 +100,7 @@ img {
 
 .contact {
   text-align: center;
+  margin-top: 30px;
 }
 
 .contact p {
@@ -121,4 +136,9 @@ img {
 
 
 /* Media Queries------------------------Media Queries */
-
+ /* @media (min-width: 767px) {
+  .main-header, .main-nav, .banner, .portfolio, .contact col {
+    display: flex;
+    
+  }
+}  */
