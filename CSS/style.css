@@ -1,132 +1,91 @@
 /* ================================================= 
 Base Element Styles----------Base element Styles 
 ================================================== */
+
+/* This is the section where you select the specific elements. For example here is where you would choose "a" or "body" or "ul" or "h2" etc. */
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 1rem; 
-  font: 300 100%/1.5 sans-serif;
-  background-color: #CDE5D7;
-  margin: 0;
-}
-
-h1 {
-  margin: 0;
-}
-
-h3 {
-  font: 300 1.3rem 'Fredoka One', cursive;
-  margin-top: 0;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  font-size: 1em;
-  margin-bottom: 2.5rem;
+  line-height: 1.5;
+  background: #CDE5D7;
 }
 
 img {
   max-width: 100%;
-  /* max-width is 100% of the screen real estate, so it wont go far that you have to scroll to see the whole image. On mobile it centers the images.*/
+  /* setting this constrains the image to the width of the viewport */
 }
+
 
 /* ================================================Base Layout Styles------------Base Layout Styles================================================== */
 
-/* -----------------Header-------------------- */
-.name, 
-.main-nav li {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  padding: 10px 10px;
-}
-
+/* -----------------Navigation-------------------- */
 .bg {
+  padding: 15px;
   background: white;
-  margin: 10px 5px;
+  margin: 5px;
+  border-radius: 3px;
 }
 
-
-.name {
-  margin-bottom: -10px;
-  /* text-transform: uppercase; */
+li {
+  margin: 10px 0;
 }
 
-.main-nav li {
-  text-transform: uppercase;
+.main-header {
+  text-align: center;
 }
+
+/* -----------------Containers------------------- */
+.banner, .portfolio, .contact, .main-footer {
+  display: flex;
+} 
+
+.main-header {}
+
+.container {
+  /* margin: 0 auto; */
+  padding: 10px 30px;
+}
+
+.main-header, .banner, .portfolio, .contact, .col {
+  flex-direction: column;
+  align-items: center;
+}
+
 
 /* ------------------Banner-------------------- */
-.banner {
-  text-align: center;
-  margin-top: 30px;
+.banner img {
+  padding: 25px;
 }
 
-.profile {
-  width: 200px;
+.banner p {
+  text-align: center; 
+  padding: 10px;
 }
+
 
 /* ------------------Portfolio------------------ */
-
 .portfolio {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  padding: 0 20px;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+
 }
 
-.portfolio h3 {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.portfolio p {
+.portfolio h2, .col {
   text-align: center;
 }
-
-.calc {
-  margin-bottom: 30px;
-}
-
 
 /* -----------------Contact--------------------- */
 
-.contact {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.contact p {
-  
-}
-
- .contact p:nth-child(2), .contact p:nth-child(3)  {
-  margin-bottom: -4px;
-}
 
 
 /* ----------------Footer----------------------- */
-
 .main-footer {
-  display: flex;
   justify-content: space-between;
-  border-top: 1px solid grey;
-  padding-top: 25px;
+  border-top: .1px solid grey; 
 }
-
-
-
-
-
-/* Main Styles--------------------------Main Styles */
-
 
 
 
@@ -136,9 +95,11 @@ img {
 
 
 /* Media Queries------------------------Media Queries */
- /* @media (min-width: 767px) {
-  .main-header, .main-nav, .banner, .portfolio, .contact col {
-    display: flex;
-    
-  }
-}  */
+
+@media (min-width: 769px) {
+ .portfolio {
+display: flex;
+flex-flow: row wrap;
+}
+
+}
