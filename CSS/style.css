@@ -13,7 +13,7 @@ body {
 }
 
 h2 {
-  margin-top: 20%;
+  margin-top: 5%;
 }
 
 img {
@@ -40,6 +40,12 @@ Base Layout Styles------------Base Layout Styles
 
 }
 
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  /* This container now keeps everything inside so there's no bleed through or reshuffling of the flex items. */
+}
+
 
 .portfolio {
   background: white;
@@ -62,21 +68,12 @@ Base Layout Styles------------Base Layout Styles
 
 
 .contact {
+  max-width: 560px;
   text-align: center;
   padding: 0 20px;
-  margin: 0 20px;
-  border-bottom: 1px solid black;
+  margin: 0 auto;
+  /* border-bottom: 1px solid black; */
 }
-
-
-/* ------------------Banner-------------------- */
-
-
-
-/* ------------------Portfolio------------------ */
-
-
-/* -----------------Contact--------------------- */
 
 
 
