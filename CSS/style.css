@@ -12,94 +12,109 @@ body {
   background: #CDE5D7;
 }
 
+h2 {
+  margin-top: 20%;
+}
+
 img {
   max-width: 100%;
   /* setting this constrains the image to the width of the viewport */
 }
 
 
-/* ================================================Base Layout Styles------------Base Layout Styles================================================== */
+/* ================================================
+Base Layout Styles------------Base Layout Styles
+================================================== */
 
 /* -----------------Navigation-------------------- */
-.bg {
-  padding: 15px;
+
+
+/* -----------------Containers------------------- */
+.nameP {
   background: white;
-  margin: 5px;
-  border-radius: 3px;
+  padding: 5%;
+  margin-bottom: 0;
+  text-align: center;
+  /* I gave the Portfolio title its own class and I styled the container the same as ".portfolio" container. I then erased the margin bottom from ".nameP" and top-margin from ".portfolio" so the two can come together and look as one. */
+  /* I erased the padding values from ".portfolio" which brings the top portion of the div closer to ".nameP". Now its looks just like the markup image. */
+
 }
 
-li {
-  margin: 10px 0;
+
+.portfolio {
+  background: white;
+  margin-top: 0;
+  padding: 0 5% 10% 5%;
+  /* 
+  Theres something about adding the padding values that keeps hold of my 3 rows in the main section. Once i stretch the screen to a width of 1100px then the 3 row breaks and the bottom two expand to fill up the space. With the padding values applied I'm able to maintain the 3 rows up till a width of 1223px. 
+  I assume when you add the padding it creates more room or something? Im still not too sure about all this.
+  */
+  
 }
 
-.main-header {
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
 }
 
-/* -----------------Containers------------------- */
-.banner, .portfolio, .contact, .main-footer {
-  display: flex;
-} 
 
-.main-header {}
 
-.container {
-  /* margin: 0 auto; */
-  padding: 10px 30px;
-}
-
-.main-header, .banner, .portfolio, .contact, .col {
-  flex-direction: column;
-  align-items: center;
+.contact {
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 20px;
+  border-bottom: 1px solid black;
 }
 
 
 /* ------------------Banner-------------------- */
-.banner img {
-  padding: 25px;
-}
 
-.banner p {
-  text-align: center; 
-  padding: 10px;
-}
 
 
 /* ------------------Portfolio------------------ */
-.portfolio {
-  background: white;
-  padding: 10px 20px;
-  border-radius: 5px;
 
-}
-
-.portfolio h2, .col {
-  text-align: center;
-}
 
 /* -----------------Contact--------------------- */
 
 
 
 /* ----------------Footer----------------------- */
-.main-footer {
-  justify-content: space-between;
-  border-top: .1px solid grey; 
-}
-
-
-
-
-
 
 
 
 /* Media Queries------------------------Media Queries */
+@media (min-width: 768px) {
+.portfolio {
+    flex-flow: row wrap;
+    /* i dont need to sent a "display" value because .portfolio is sill accepting the function from the base container style of "flex" */
+    /* flex-flow allows me to input a "flex-direction" and the "flex-wrap" value on one line instead of two seperate properties. */
+    justify-content: center;
+    
+  } 
 
-@media (min-width: 769px) {
- .portfolio {
-display: flex;
-flex-flow: row wrap;
+.portfolio p {
+  text-align: center;
+} 
+
+.col {
+    padding: 5px;
+    flex: 1 275px;
+    /* 
+    if i dont sent a flex-basis value then the items are scrunched up together. I dont understand why i cant leave the "flex-basis" value at "0". I dont even know if the flex-basis value is even working here? 
+    */
+  }
+
 }
 
+@media (min-width: 1024px) {
+  /* .portfolio {
+    flex-flow: row wrap;
+    justify-content: center;
+  } */
+   /* 
+   I dont think i need to add these properties because once the px width is 825 the .portfolio container distributes the items into 3 rows. Im not to sure why this is?
+   I came to the conclusion that i dont need this. The same property is in the "@media (min-width: 768px)" so it still applies. Also the padding from the .portfolio is whats holding the items in place for much longer. Increasing the padding must hold the items in longer. If there isnt any padding then this must be why the items move to the next line or loose structure quickly because theres room to be filled in. 
+   */
 }
