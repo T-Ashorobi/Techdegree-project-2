@@ -5,11 +5,16 @@ Base Element Styles----------Base element Styles
 /* This is the section where you select the specific elements. For example here is where you would choose "a" or "body" or "ul" or "h2" etc. */
 * {
   box-sizing: border-box;
+  /* this is done so that whichever element you decide to manipulate thier padding or border the values will be included in width and height. */
 }
 
 body {
   line-height: 1.5;
   background: #CDE5D7;
+}
+
+a {
+  text-decoration: none;
 }
 
 h2 {
@@ -23,6 +28,17 @@ p {
 img {
   max-width: 100%;
   /* setting this constrains the image to the width of the viewport */
+}
+
+nav {
+  /* here is where i will add the decorations to my nav bar. Also as you can see we can apply a font family at a specific element.
+  Just make sure to add your own style. 
+  */
+  font-family: "Roboto", Arial, Verdana;
+  font-weight: 400;
+  letter-spacing: .05em;
+  /* background-color: #829356; */
+  padding: 25px; 
 }
 
 
@@ -41,15 +57,45 @@ Base Layout Styles------------Base Layout Styles
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  /* This container now keeps everything inside so there's no bleed through or reshuffling of the flex items. */
+  /* This container now keeps everything inside so there's no bleed through or reshuffling of the flex items. 
+  I can also add this in the <body> also. We remove the default broswer setting of the margin and center the structure. Also we add a "max-width" so that there's a limit of space our work can move around in. If not then the work we create may bleed through.
+  */
 }
 
-.main-header {
+.name, .main-nav {
   /* display:flex;
   flex-flow: column wrap;
   justify-content: center; */
   text-align: center;
-  
+}
+
+.main-nav, .main-nav li {
+  width: 100%; 
+  /* I dont understand why the .main-nav li is also included to have a width of 100%? The .main-nav should be enough. */
+  /* I need to test this out and see what happens. */
+}
+
+/* .name a, .main-nav a {
+  color: #000;
+  I dont know what this does yet? In the meantime I dont have any <a> available at the moment. 
+} */
+
+.main-nav {
+  margin-top: 30px;
+  /* this will give a bit of space with .name thats above. */
+}
+
+.main-nav li {
+  padding: 10px 0;
+  margin: 5px auto;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.main-nav a {
+  /* text-transform: ; 
+  apply once you add some <a>. I want to get the structure down before I do this. 
+  */ 
 }
 
 .banner {
@@ -105,6 +151,32 @@ Base Layout Styles------------Base Layout Styles
 
 /* Media Queries------------------------Media Queries */
 @media (min-width: 768px) {
+  /* once you set a this @media then the designs from 0-767px are applied. This will apply from 768px and on. */
+.main-nav {
+  margin-top: 0;
+  /* This is to remove the space from before to bring .main-nav and .name closer together. */
+}
+
+.main-nav li {
+  display: inline-block;
+  /* This is to display the lists side by side in a row instead of a column. At the same time it gives it a block lvl format. */
+  width: auto;
+  /* We set the value to auto which is the default value of "width". It also overrides the value we set before of "width: 100%" */
+  margin-right: 15px;
+  /* This here is just to give a bit more space in between each <li> */
+  background-color: transparent;
+  /* This will negate the color of what what we had before. */
+}
+
+.main-nav li:last-child {
+  margin-right: 0;
+  /* Creating space in between each lists works but its off to the right a bit. We selected the last <li> to remove its margin value which centers our <li>. */
+}
+
+.main-nav a {
+  color: #fff;
+}
+
 .banner {
   display: flex;
   
@@ -143,6 +215,25 @@ margin: 0 20px 0 0;
 }
 
 @media (min-width: 1024px) {
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav, .main-nav li {
+  width: initial;
+  margin-bottom: 0;
+  /* without this the wording didn't space out. I thought i wouldn't need to write this here because I wrote this in the "@media of 768px". I dont understand why this didn't apply?
+  I guess because it was only specified for the <li>, this is attacking the <ul> 
+  */
+  /* When using CSS flexbox and Grids its better to use the value "initial" instead of "auto" because auto can cause strange behaviors.
+  width: auto    Default value. The browser calculates the width.
+  width: initial Sets this property to its default value.
+  */
+}
+
+
   /* .portfolio {
     flex-flow: row wrap;
     justify-content: center;
