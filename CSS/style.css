@@ -16,6 +16,10 @@ h2 {
   margin-top: 5%;
 }
 
+p {
+  font-size: 1.2rem;
+}
+
 img {
   max-width: 100%;
   /* setting this constrains the image to the width of the viewport */
@@ -29,7 +33,32 @@ Base Layout Styles------------Base Layout Styles
 /* -----------------Navigation-------------------- */
 
 
+.profile {
+  width: 350px;
+}
+
 /* -----------------Containers------------------- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  /* This container now keeps everything inside so there's no bleed through or reshuffling of the flex items. */
+}
+
+.main-header {
+  /* display:flex;
+  flex-flow: column wrap;
+  justify-content: center; */
+  text-align: center;
+  
+}
+
+.banner {
+  text-align: center;
+  padding: 0 20px;
+  /* margin: 0 auto; */
+  /* max-width: 850px; */
+}
+
 .nameP {
   background: white;
   padding: 5%;
@@ -39,13 +68,6 @@ Base Layout Styles------------Base Layout Styles
   /* I erased the padding values from ".portfolio" which brings the top portion of the div closer to ".nameP". Now its looks just like the markup image. */
 
 }
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  /* This container now keeps everything inside so there's no bleed through or reshuffling of the flex items. */
-}
-
 
 .portfolio {
   background: white;
@@ -83,6 +105,21 @@ Base Layout Styles------------Base Layout Styles
 
 /* Media Queries------------------------Media Queries */
 @media (min-width: 768px) {
+.banner {
+  display: flex;
+  
+}
+
+.banner p {
+order: -1;
+text-align: start;
+margin: 0 20px 0 0;
+}
+
+.banner img {
+  width: 275px;
+}
+
 .portfolio {
     flex-flow: row wrap;
     /* i dont need to sent a "display" value because .portfolio is sill accepting the function from the base container style of "flex" */
@@ -114,4 +151,16 @@ Base Layout Styles------------Base Layout Styles
    I dont think i need to add these properties because once the px width is 825 the .portfolio container distributes the items into 3 rows. Im not to sure why this is?
    I came to the conclusion that i dont need this. The same property is in the "@media (min-width: 768px)" so it still applies. Also the padding from the .portfolio is whats holding the items in place for much longer. Increasing the padding must hold the items in longer. If there isnt any padding then this must be why the items move to the next line or loose structure quickly because theres room to be filled in. 
    */
+
+   .banner {
+     margin: 0 25px;
+   }
+  
+   .banner p {
+    padding: 0 25px 0 0px;
+  }
+
+  .banner img {
+    width: 300px;
+  }
 }
