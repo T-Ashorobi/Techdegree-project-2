@@ -4,27 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- the way the meta is written here will allow for a mobile-first design approach -->
   <link rel="stylesheet" href="CSS/normalize.css">
+  <!-- Normalize.css helps keep my site consistant across all browsers by resetting syles of elements that comes default with each browser. I can also add my own adjustments also. -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;500&family=Varela+Round&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="CSS/style.css">
-  <!-- something is wrong with the font when it reaches 768px -->
+  <!-- something is wrong with the font when it reaches 768px 
+    I think the problem was cause by not keeping the max width to constrain all my work. Idk i guess since it overflowed it threw everything out of wack. Now it all works at each different viewpoints
+  -->
   <title>Tech Degree Project 2</title>
 </head>
 
 <body>
   <div class="container">
+
     <nav id="home">
+      <!-- From now on i have to be careful of how I structure my html. Its tough when I only see div's, so its good practice to name the particular section so I and others know where to start looking.  -->
+      <!-- Also I need to keep in mind of the how many containers i have. If i have too many contaniers its tough when I style something the output wont match what i want. Keep it minimal and do not over complicate yourself -->
       <h1 class="name">Student Name</h1>
       <ul class="main-nav">
         <li class="bg-1"><strong><a href="#home">Home</a></strong></li>
         <li class="bg-2"><strong><a href="#portfolio">Portfolio</a></strong></li>
         <li class="bg-3"><strong><a href="#tact">Contact</a></strong></li>
       </ul>
+      <!-- The set up this way of the nav is simple and clean. the container is clear and I know clearly who are the childeren. In this case its 2 kids: "h1" and "ul" -->
     </nav>
 
     <div class="banner">
+      <!-- again if you dont have a specific name for a particular section then using the <div> will work. -->
       <img class="profile" src="images/responsive-layout-profile.png" alt="profile image">
       <p>Hi! I'm a front-end developer who loves responsive design and css. I recently finished learning front-end web
         development at treehouse and I'm excited to put all my skills to use!</p>
@@ -32,6 +41,7 @@
 
     <main>
       <section id="portfolio">
+        <!-- I think for each section it'll be good practice to create an "id" so a user can immediately jump to that section. Also it should be the parent container also. The purpose of an "id" is to use it once because its very specific so this would fit that description. Then under it would have "class" -->
         <div>
           <h2 class="nameP">Portfolio</h2>
         </div>
@@ -97,14 +107,15 @@
         <!-- Now that i have it set up this way the Footer has 2 children, the h3 and the ul -->
         <h3 class="end">Student Name</h3>
         <ul>
-          <li class="btt"><a href="#home">Back to Top</a></li>
-          <li class="reveal"><a href="#home">Home</a></li>
-          <li class="reveal"><a href="#portfolio">Portfolio</a></li>
-          <li class="reveal"><a href="#tact">Contact</a></li>
+          <li class="btt"><strong><a href="#home">Back to Top</a></strong></li>
+          <li class="reveal"><strong><a href="#home">Home</a></strong></li>
+          <li class="reveal"><strong><a href="#portfolio">Portfolio</a></strong></li>
+          <li class="reveal"><strong><a href="#tact">Contact</a></strong></li>
         </ul>
         <!-- </div> -->
       </footer>
     </main>
+
   </div>
 </body>
 
