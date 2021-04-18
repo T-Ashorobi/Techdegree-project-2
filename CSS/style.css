@@ -17,11 +17,25 @@ a {
   text-decoration: none;
 }
 
+a:link {
+  color: blue;
+  /* I dont know how to show off the hex color i chose before the link is clicked? */
+}
+
+a:visited {
+  color: #EF6461;
+}
+
 h2 {
   margin-top: 5%;
 }
 
+h1, h2, h3 {
+  font-family: 'Antonio', sans-serif;
+}
+
 p {
+  font-family: 'Varela Round', sans-serif;
   font-size: 1.2rem;
 }
 
@@ -38,7 +52,8 @@ nav {
   font-weight: 400;
   letter-spacing: .05em;
   /* background-color: #829356; */
-  padding: 25px; 
+  padding: 20px; 
+  margin: 0 25px;
 }
 
 footer {
@@ -90,9 +105,9 @@ Base Layout Styles------------Base Layout Styles
 
 /* .name a, .main-nav a {
   color: #000;
-  I dont know what this does yet? In the meantime I dont have any <a> available at the moment. 
-} */
-
+  /* I dont know what this does yet? In the meantime I dont have any <a> available at the moment.  
+} 
+*/
 .main-nav {
   margin-top: 30px;
   /* this will give a bit of space with .name thats above. */
@@ -195,9 +210,13 @@ Base Layout Styles------------Base Layout Styles
   /* Creating space in between each lists works but its off to the right a bit. We selected the last <li> to remove its margin value which centers our <li>. */
 }
 
-.main-nav a {
+/* .main-nav a, footer a {
   color: #fff;
-}
+} */
+
+/* a:visited {
+  color: #EF6461;
+} */
 
 .banner {
   display: flex;
