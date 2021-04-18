@@ -74,27 +74,30 @@
 
 
       <div class="contact">
-        <h3>Contact</h3>
-        <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear
-          from you!
-        </p>
-        <p>Phone <strong>+33 (111) 555-1234</strong></p>
-        <p>Email <strong>email@yoursite.com</strong></p>
+        <contact>
+          <h3>Contact</h3>
+          <p>If you're interested in chatting or want more information about what I've been working on, I'd love to hear
+            from you!
+          </p>
+          <p>Phone <strong>+33 (111) 555-1234</strong></p>
+          <p>Email <strong>email@yoursite.com</strong></p>
+        </contact>
       </div>
 
 
-      <div>
-        <footer class="main-footer">
-          <h4 class="end">Student Name</h4>
-          <h4 class="btt">Back to Top</h4>
-          <!-- <ul>
-            <li>Student Name</li>
-            <li>Home</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
-          </ul> -->
-        </footer>
-      </div>
+      <footer>
+        <!-- <div class="main-footer"> -->
+        <!-- Having the div's really screwed up my CSS format. I have to be careful about how I use the div container. I was using a div container inside of a footer container. I can see how this will mess up my CSS and how some things were not showing up or being used correctly -->
+        <!-- Now that i have it set up this way the Footer has 2 children, the h3 and the ul -->
+        <h3 class="end">Student Name</h3>
+        <ul>
+          <li class="btt">Back to Top</li>
+          <li class="reveal">Home</li>
+          <li class="reveal">Portfolio</li>
+          <li class="reveal">Contact</li>
+        </ul>
+        <!-- </div> -->
+      </footer>
     </main>
   </div>
 </body>
